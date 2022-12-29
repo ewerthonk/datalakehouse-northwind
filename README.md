@@ -15,7 +15,7 @@
 
 ## 👨🏻‍🏫 Introduction
 
-This project is the creation of an elementary [Data Lakehouse](https://www.databricks.com/glossary/data-lakehouse) - using [Databricks](https://www.databricks.com) and the [Delta lake](https://delta.io) technology - for a database containig sales data of a fictitious company called “**Northwind** Traders”, which imports and exports specialty foods around the world. 
+This project is the creation of an elementary [Data Lakehouse](https://www.databricks.com/glossary/data-lakehouse) - using [Databricks](https://www.databricks.com) and the [Delta lake](https://delta.io) technology - for a database containing sales data of a fictitious company called “**Northwind** Traders”, which imports and exports specialty foods around the world. 
 
 With the Data Lakehouse created, a **business analysis** is conducted to answer the following questions:
 
