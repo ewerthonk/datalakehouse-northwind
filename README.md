@@ -19,7 +19,7 @@ This project is the creation of an elementary [Data Lakehouse](https://www.datab
 
 With the Data Lakehouse created, a **business analysis** is conducted to answer the following questions:
 
-- What are the 3 least sold products?
+- What are the 5 least sold products?
 - What are the top 5 Customers with the highest number of purchases?
 - What are the top 5 Customers with the highest purchases value?
 - Who was the employee who made more sales last year?
