@@ -1,4 +1,4 @@
-# Data Engineering - Northwind Datalakehouse with Delta Lake 
+# Northwind Data Lakehouse with Delta Lake 
 <div align="center">
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=Databricks&logoColor=white">
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
@@ -34,18 +34,19 @@ Northwind Database:
 
 ## 🛠️ Methods
 
-To create the **Bronze** layer:
+**Bronze** layer:
+
 - Python.
-- SQL:
-  - COPY INTO.
+- COPY INTO (SQL).
 
-To create the **Silver** layer:
-- SQL:
-  - MERGE INTO.
-  - Data types wrangling.
-  - Null values wrangling.
+**Silver** layer:
 
-To create the **Gold** layer and generate **Analysis**:
+- MERGE INTO (SQL).
+- Data types wrangling (SQL).
+- Null values wrangling (SQL).
+
+**Gold** layer and **Analysis**:
+
 - PySpark.
 - Koalas.
 - Spark Pandas.
