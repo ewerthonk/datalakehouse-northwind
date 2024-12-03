@@ -1,6 +1,10 @@
 # Northwind Data Lakehouse with Delta Lake 
 
-*Creating a data lakehouse on databricks with community edition.*
+<div align="center">
+  <em>Creating a data lakehouse on databricks with community edition.</em>
+</div>
+
+<br>
 
 <div align="center">
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=Databricks&logoColor=white">
