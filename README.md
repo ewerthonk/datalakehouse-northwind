@@ -1,74 +1,67 @@
 # Northwind Data Lakehouse with Delta Lake 
+
+*Creating a data lakehouse on databricks with community edition.*
+
 <div align="center">
 <img src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=Databricks&logoColor=white">
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
 <img src="https://img.shields.io/badge/Apache_Spark-FFFFFF?style=for-the-badge&logo=apachespark&logoColor=#E35A16">
 </div>
 
-## 🧾 Table of Contents
-  - [👨🏻‍🏫 Introduction](#-introduction)
-  - [🗺 Project](#-project)
-  - [🛠️ Methods](#-Methods)
-  - [🗄 Reproducibility](#-reproducibility)
-  - [📚 Learnings](#-learnings)
-  - [🛣 Roadmap](#-roadmap)
+## 📖 Project
 
-## 👨🏻‍🏫 Introduction
+### 👨🏻‍🏫 Introduction
 
-This project is the creation of an elementary [Data Lakehouse](https://www.databricks.com/glossary/data-lakehouse) - using [Databricks](https://www.databricks.com) and the [Delta lake](https://delta.io) technology - for a database containing sales data of a fictitious company called “**Northwind** Traders”, which imports and exports specialty foods around the world. 
+This project is the creation of a [Data Lakehouse](https://www.databricks.com/glossary/data-lakehouse) - using [Databricks](https://www.databricks.com) and [Delta lake](https://delta.io) technology - for a database containing sales data of a fictitious company called “**Northwind** Traders”, which imports and exports specialty foods around the world. 
 
-With the Data Lakehouse created, a **business analysis** is conducted to answer the following questions:
+The project uses the community version of Databricks, which imposes **restrictions**, such as the use of Delta Live Streams, Cloud Partners Integration, Github Integration and Job Scheduling - the usage of this tools would enrich the project by a lot.
 
-- What are the 5 least sold products?
-- What are the top 5 Customers with the highest number of purchases?
-- What are the top 5 Customers with the highest purchases value?
-- Who was the employee who made more sales last year?
+In order to run the project, the following requirements are needed:
+- Databricks Runtime 11.0 (community edition)
+- Apache Spark 3.3.0
+- Scala 2.12
 
-Northwind Database:
+Only structured data was used in the project, but the workspace and project structure - a Data Lakehouse - remains scalable for using semi-structured and unstructured data - depending on the use-case.
 
-<img src="./references/northwind%20erd.jpg">
+### 🎯 Goal
 
-## 🗺 Project
+- Create a data lakehouse from the csv files of the database using the following technologies:
+  - PySpark
+  - Koalas
+  - Spark Pandas
+  - Hive SQL
+
+- With the Data Lakehouse created, conducting a **business analysis** to answer the following questions:
+  - What are the 5 least sold products?
+  - What are the top 5 Customers with the highest number of purchases?
+  - What are the top 5 Customers with the highest purchases value?
+  - Who was the employee who made more sales last year?
+
+### 💽 Database:
+
+<img src="./references/northwind_erd.jpg">
+
+## 🗺 Data Lakehouse
 
 <img src="./references/project.png">
 
-## 🛠️ Methods
+## 🗄 Notebooks
 
-**Bronze** layer:
+- [1.0-bronze-layer.ipynb](notebooks/1.0-bronze-layer.ipynb)
+- [2.0-silver-layer.ipynb](notebooks/2.0-silver-layer.ipynb)
+- [3.0-gold-layer.ipynb](notebooks/3.0-gold-layer.ipynb)
+- [4.0-analysis.ipynb](notebooks/4.0-analysis.ipynb)
 
-- Python.
-- COPY INTO (SQL).
+## 📦 Folder Structure
 
-**Silver** layer:
-
-- MERGE INTO (SQL).
-- Data types wrangling (SQL).
-- Null values wrangling (SQL).
-
-**Gold** layer and **Analysis**:
-
-- PySpark.
-- Koalas.
-- Spark Pandas.
-- Spark/Hive SQL.
-
-## 🗄 Reproducibility
-
-To reproduce the project, follow the steps below:
-
-1. Log into your community version of Databricks.
-2. Import the notebooks into your workspace
-3. Import the ```.csv``` files from ```/data``` folder into your Databricks DBFS.
-4. Start a Cluster following the ```requirements.txt``` file guidance.
-5. Customize the DBFS root path of ```1.0-ejk-bronze-layer.ipynb``` in the utilities section according to your specifics.
-6. Run all notebooks in their sequence.
-
-## 📚 Learnings
-
-- The project uses the community version of Databricks, which imposes **restrictions**, such as the use of Delta Live Streams, Cloud Partners Integration, Github Integration and Job Scheduling - the usage of this tools would enrich the project by a lot.
-- Only structured data was used in the project, but the workspace and project structure - a Data Lakehouse - remains scalable for using semi-structured and unstructured data - just requires the use-case wrangling.
-
-## 🛣 Roadmap
-
-- Transform the Database schema to a Star Schema in the Gold layer.
-- Add semi-structured and unstructured data into the Data Lakehouse.
+    ├── LICENSE
+    ├── README.md          <- The top-level README for developers using this project.
+    ├── data
+    │   ├── processed      <- The final, canonical data sets for modeling.
+    │   └── raw            <- The original, immutable data dump.
+    │
+    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                         and a short `-` delimited description, e.g.
+    │                         `1.0-initial-data-exploration`.
+    │
+    ├── references         <- Figures, manuals, and all other explanatory materials.
